@@ -1,0 +1,77 @@
+{
+  "name": "Fileroom_SanityTest",
+  "projectId": "432d591a-c7ee-460a-90c6-1cbd080a1716",
+  "description": "The aim of this project is to automate the sanity testing process for the FileRoom system, ensuring that all critical functionalities are working correctly. This will enhance efficiency, reduce manual effort, and ensure consistent validation of the system's performance.",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Cloning_MasterTaxClient": "[1.0.9]",
+    "PingID": "[1.0.9]",
+    "Review_Wizards": "[1.0.30]",
+    "Sanity_ExportValidation": "[1.0.10]",
+    "Sanity_ReviewTreeValidation": "[1.0.6]",
+    "Sanity_SCD_ReviewQueue": "[1.0.11]",
+    "Sanity_SubmissionWizard": "[1.0.8]",
+    "SanityReport_GenerateOutput": "[1.0.3]",
+    "SanityReport_ReadTemplate": "[1.0.5]",
+    "SanityReport_TCFiltering": "[1.0.1]",
+    "Scd_ManagerAssignmentQueue": "[1.0.8]",
+    "SPBinder_BinderInfoRating": "[1.0.3]",
+    "SPBinder_IndexAndReviewTree": "[1.0.6]",
+    "SPBinder_InputForms": "[1.0.7]",
+    "TakeScreenshot": "[1.0.1]",
+    "TaxSoftware_Login": "[1.0.13]",
+    "UiPath.Excel.Activities": "[2.24.4]",
+    "UiPath.System.Activities": "[24.10.7]",
+    "UiPath.Testing.Activities": "[24.10.3]",
+    "UiPath.UIAutomation.Activities": "[23.10.13]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "25.0.157.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "eebbc28b-a908-46f1-9e51-4dbf3bd45e0c",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
