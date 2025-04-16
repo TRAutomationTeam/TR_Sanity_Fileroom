@@ -133,7 +133,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Project Name: Fileroom_SanityTest]&#xA;[Objective: The aim of this project is to automate the sanity testing process for the FileRoom system, ensuring that all critical functionalities are working correctly. This will enhance efficiency, reduce manual effort, and ensure consistent validation of the system's performance.]&#xA;[Scope:&#xA;1.Base Document Preparation: Use a demo tax file as the base document for testing. This will serve as the standard input for all subsequent test cases.&#xA;2.Organizer Page Validation: Ensure that the Organizer page is correctly set up so that all wizards can be accessed and executed without issues. This involves checking navigation paths and functionality triggers for all necessary components.&#xA;3.Preparer Dashboard Testing: Validate the Input Form functionality using the 'Unassociated Form' and 'Move to' features. This includes ensuring that forms can be correctly filled, submitted, and associated with the appropriate records.&#xA;4.Export Functionality Testing: Test the 'Export to Tax' functionality to confirm that data is accurately exported into the specified tax software. This involves verifying data integrity and format compatibility.&#xA;5.Import and Validation: Import transaction records (Tr) and validate that the Leadsheet is correctly populated. This ensures that imported data is accurately reflected in the system, maintaining data consistency.&#xA;6.Binder Submission: Automate the process of submitting a binder from the SCD (Source Control Document). This involves verifying that all related documents are correctly compiled and submitted without errors.]&#xA;[Author:   ]&#xA;[Applications involved: GoSystem, SPbinder]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1853,778.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Project Name: Fileroom_SanityTest]&#xA;[Objective: The aim of this project is to automate the sanity testing process for the FileRoom system, ensuring that all critical functionalities are working correctly. This will enhance efficiency, reduce manual effort, and ensure consistent validation of the system's performance.]&#xA;[Scope:&#xA;1.Base Document Preparation: Use a demo tax file as the base document for testing. This will serve as the standard input for all subsequent test cases.&#xA;2.Organizer Page Validation: Ensure that the Organizer page is correctly set up so that all wizards can be accessed and executed without issues. This involves checking navigation paths and functionality triggers for all necessary components.&#xA;3.Preparer Dashboard Testing: Validate the Input Form functionality using the 'Unassociated Form' and 'Move to' features. This includes ensuring that forms can be correctly filled, submitted, and associated with the appropriate records.&#xA;4.Export Functionality Testing: Test the 'Export to Tax' functionality to confirm that data is accurately exported into the specified tax software. This involves verifying data integrity and format compatibility.&#xA;5.Import and Validation: Import transaction records (Tr) and validate that the Leadsheet is correctly populated. This ensures that imported data is accurately reflected in the system, maintaining data consistency.&#xA;6.Binder Submission: Automate the process of submitting a binder from the SCD (Source Control Document). This involves verifying that all related documents are correctly compiled and submitted without errors.]&#xA;[Author:   ]&#xA;[Applications involved: GoSystem, SPbinder]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1467.2,20" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -248,7 +248,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">545,215</av:Point>
-          <av:Size x:Key="ShapeSize">229,107</av:Size>
+          <av:Size x:Key="ShapeSize">228.8,107.2</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Double x:Key="StateContainerWidth">217</x:Double>
           <x:Double x:Key="StateContainerHeight">34</x:Double>
@@ -266,9 +266,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="567,4271" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="582.4,6015.2" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="521,3799" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="537.6,5539.2" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -276,13 +276,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="519,2614" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="536,2036.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign - Business Exception" sap:VirtualizedContainerService.HintSize="485,114" sap2010:WorkflowViewState.IdRef="Assign_30">
+                      <ui:GetCurrentJobInfo DisplayName="Get Current Job Info" sap:VirtualizedContainerService.HintSize="502.4,56.8" sap2010:WorkflowViewState.IdRef="GetCurrentJobInfo_2" Result="[JobInfo]" />
+                      <Assign DisplayName="Assign - Business Exception" sap:VirtualizedContainerService.HintSize="502.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_30">
                         <Assign.To>
                           <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
                         </Assign.To>
@@ -290,20 +291,28 @@
                           <InArgument x:TypeArguments="ui:BusinessRuleException">[Nothing]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If sap2010:Annotation.AnnotationText="The SanityReport_ReadTemplate is called only if is_first_run is True" Condition="[Not TransactionItem.Progress.Contains(&quot;First_ReadTemplate&quot;)]" DisplayName="If SanityReport_ReadTemplate First Run" sap:VirtualizedContainerService.HintSize="485,1470" sap2010:WorkflowViewState.IdRef="If_20">
+                      <If sap2010:Annotation.AnnotationText="The SanityReport_ReadTemplate is called only if is_first_run is True" Condition="[Not TransactionItem.Progress.Contains(&quot;First_ReadTemplate&quot;)]" DisplayName="If SanityReport_ReadTemplate First Run" sap:VirtualizedContainerService.HintSize="502.4,1525.6" sap2010:WorkflowViewState.IdRef="If_20">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,1211" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,1266.4" sap2010:WorkflowViewState.IdRef="Sequence_70">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Assign - Get Current Transaction from InputSheet" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_36">
+                            <Assign DisplayName="Assign - Start Time" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_41">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="s:DateTime">[dtStartTime]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="s:DateTime">[DateTime.Now.ToLocalTime]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign DisplayName="Assign - Get Current Transaction from InputSheet" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_36">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="sd:DataRow">[drRowToUpdate]</OutArgument>
                               </Assign.To>
@@ -316,7 +325,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <s1:SanityReport_ReadTemplate sap:VirtualizedContainerService.HintSize="434,377" sap2010:WorkflowViewState.IdRef="SanityReport_ReadTemplate_1" in_SanityTestFilesheetName="[Config(&quot;SanityReport_FilesheetName&quot;).ToString]" in_strBinderID="[drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim]" in_strSPClientID="[TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString]" in_strSanityTestOutputPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString]" in_strSanityTestTemplatePath="[Config(&quot;SanityReport_TemplatePath&quot;).ToString]" out_dtTestSummaryReport="[dtTestSummaryReport]">
+                            <s1:SanityReport_ReadTemplate sap:VirtualizedContainerService.HintSize="433.6,382.4" sap2010:WorkflowViewState.IdRef="SanityReport_ReadTemplate_1" in_SanityTestFilesheetName="[Config(&quot;SanityReport_FilesheetName&quot;).ToString]" in_strBinderID="[drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim]" in_strSPClientID="[TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString]" in_strSanityTestOutputPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString]" in_strSanityTestTemplatePath="[Config(&quot;SanityReport_TemplatePath&quot;).ToString]" out_dtTestSummaryReport="[dtTestSummaryReport]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -324,15 +333,66 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </s1:SanityReport_ReadTemplate>
-                            <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dtReporter]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ReadRange_4" Range="A15:F29" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]">
+                            <ui:IfElseIfV2 Condition="[System.IO.File.Exists(Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="IfElseIfV2_6">
+                              <ui:IfElseIfV2.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </ui:IfElseIfV2.Else>
+                              <ui:IfElseIfV2.ElseIfs>
+                                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[System.IO.File.Exists(Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_5">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,202.4" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Component Summary Details" DataTable="[dtReporter]" DisplayName="Read Range Workbook - Component Summary" sap:VirtualizedContainerService.HintSize="382.4,142.4" sap2010:WorkflowViewState.IdRef="ReadRange_5" Range="[Config(&quot;ComponentSummaryRange&quot;).ToString]" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:ReadRange>
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                </sc:BindingList>
+                              </ui:IfElseIfV2.ElseIfs>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                            </ui:ReadRange>
-                            <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B9" DisplayName="Process Start Time" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_42" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[DateTime.Now.ToLocalTime.ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
+                              <ui:IfElseIfV2.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,202.4" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Component Summary Details" DataTable="[dtReporter]" DisplayName="Read Range Workbook - Component Summary" sap:VirtualizedContainerService.HintSize="382.4,142.4" sap2010:WorkflowViewState.IdRef="ReadRange_4" Range="[Config(&quot;ComponentSummaryRange&quot;).ToString]" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:ReadRange>
+                                </Sequence>
+                              </ui:IfElseIfV2.Then>
+                            </ui:IfElseIfV2>
+                            <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;StartTime&quot;).ToString]" DisplayName="Process Start Time" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_42" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[dtStartTime.ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
                             <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - Read Template" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="433.6,226.4" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_2" Progress="First_ReadTemplate" TransactionItem="[TransactionItem]" />
                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_39" Message="[&quot;SanityReport_ReadTemplate First run executed&quot;]" />
                           </Sequence>
@@ -347,7 +407,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="484.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="502.4,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[TransactionItem]</InArgument>
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
@@ -362,15 +422,14 @@
                           <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_drRowToUpdate">[drRowToUpdate]</OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <ui:IfElseIfV2 Condition="[isSystemException]" DisplayName="Else If Throw System / Business Exception" sap:VirtualizedContainerService.HintSize="484.8,746.4" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                      <ui:IfElseIfV2 Condition="[isSystemException]" DisplayName="Else If Throw System / Business Exception" sap:VirtualizedContainerService.HintSize="502.4,56.8" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
                         <ui:IfElseIfV2.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,173.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[isSystemException.ToString+&quot; &quot;+isBusinessException.ToString]" />
                           </Sequence>
                         </ui:IfElseIfV2.Else>
                         <ui:IfElseIfV2.ElseIfs>
@@ -391,7 +450,7 @@
                         </ui:IfElseIfV2.ElseIfs>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -406,7 +465,7 @@
                           </Sequence>
                         </ui:IfElseIfV2.Then>
                       </ui:IfElseIfV2>
-                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="484.8,48" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                      <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="502.4,48" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -463,14 +522,14 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="518.4,24.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="536,24.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Set transaction status to BusinessRuleException" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_26">
+                          <Assign DisplayName="Set transaction status to BusinessRuleException" sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_26">
                             <Assign.To>
                               <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
                             </Assign.To>
@@ -478,7 +537,7 @@
                               <InArgument x:TypeArguments="ui:BusinessRuleException">[Exception]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <TryCatch DisplayName="Try Catch Set Transaction Status (BRE)" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                          <TryCatch DisplayName="Try Catch Set Transaction Status (BRE)" sap:VirtualizedContainerService.HintSize="484.8,48" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -541,14 +600,14 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="518.4,24.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="536,24.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Set transaction status to SystemException" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_27">
+                          <Assign DisplayName="Set transaction status to SystemException" sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_27">
                             <Assign.To>
                               <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                             </Assign.To>
@@ -562,7 +621,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
-                          <TryCatch DisplayName="Try Catch SetTransactionStatus (SE)" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+                          <TryCatch DisplayName="Try Catch SetTransactionStatus (SE)" sap:VirtualizedContainerService.HintSize="484.8,48" sap2010:WorkflowViewState.IdRef="TryCatch_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -616,16 +675,26 @@
                     </Catch>
                   </TryCatch.Catches>
                   <TryCatch.Finally>
-                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="518.4,954.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="strBinderID" />
-                      </Sequence.Variables>
+                    <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="536,3272" sap2010:WorkflowViewState.IdRef="Sequence_35">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign - Binder ID" sap:VirtualizedContainerService.HintSize="484.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_35">
+                      <Assign DisplayName="Assign - Get Current Transaction from InputSheet" sap:VirtualizedContainerService.HintSize="502.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_39">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:DataRow">[drRowToUpdate]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:DataRow">[dtInputData.AsEnumerable().FirstOrDefault(Function(row) row("SPClientID").ToString() = TransactionItem.SpecificContent("SPClientID").ToString())]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <Assign DisplayName="Assign - Binder ID" sap:VirtualizedContainerService.HintSize="502.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_35">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[strBinderID]</OutArgument>
                         </Assign.To>
@@ -633,46 +702,60 @@
                           <InArgument x:TypeArguments="x:String">[drRowToUpdate("ExpectedBinderID").ToString.Trim]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:IfElseIfV2 Condition="[System.IO.File.Exists(Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;)]" DisplayName="Else If - Check Sanity File exist with BinderID/SPClientID" sap:VirtualizedContainerService.HintSize="484.8,615.2" sap2010:WorkflowViewState.IdRef="IfElseIfV2_5">
+                      <ui:IfElseIfV2 Condition="[System.IO.File.Exists(Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;)]" DisplayName="Else If - Check Sanity File exist with BinderID/SPClientID" sap:VirtualizedContainerService.HintSize="502.4,2643.2" sap2010:WorkflowViewState.IdRef="IfElseIfV2_5">
                         <ui:IfElseIfV2.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="483.2,173.6" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="500.8,225.6" sap2010:WorkflowViewState.IdRef="Sequence_69">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Report summary not updated" />
+                            <ui:LogMessage DisplayName="Log Message - Report Summary Fail" sap:VirtualizedContainerService.HintSize="467.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Warn" Message="[&quot;Report summary not updated&quot;]" />
                           </Sequence>
                         </ui:IfElseIfV2.Else>
                         <ui:IfElseIfV2.ElseIfs>
                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                             <ui:IfElseIfBlock BlockType="ElseIf" Condition="[System.IO.File.Exists(Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
                               <ui:IfElseIfBlock.Then>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="483.2,108" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="500.8,2084" sap2010:WorkflowViewState.IdRef="Sequence_63">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Get Report Summary Details" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                  <Sequence DisplayName="Get Report Summary Details" sap:VirtualizedContainerService.HintSize="467.2,2024" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B2" DisplayName="Binder ID" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_72" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[strBinderID]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B3" DisplayName="Engagement Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_59" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B4" DisplayName="Service Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_60" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B5" DisplayName="Tax Software" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_61" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B6" DisplayName="Leadsheet Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_62" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B7" DisplayName="Submission Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_63" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="Fileroom" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B8" DisplayName="Tax Year" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_64" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxYear&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B10" DisplayName="End Time" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_68" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[DateTime.Now.ToLocalTime.ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B11" DisplayName="User Identity" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_65" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Environment.UserName]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B12" DisplayName="Mode of Execution" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_66" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="Attended" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B12" DisplayName="Mode of Execution" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_67" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="Attended" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
-                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B13" DisplayName="Execution Status" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_71" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.Status.ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_38">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[TestReportExcel]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[Config("SanityReport_ReportPath").ToString.Split(".xlsx")(0)+"_"+strBinderID+".xlsx"]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;EngagementType&quot;).ToString]" DisplayName="Engagement Type" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_75" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;ServiceType&quot;).ToString]" DisplayName="Service Type" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_76" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;TaxSoftware&quot;).ToString]" DisplayName="Tax Software" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_77" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;LeadsheetType&quot;).ToString]" DisplayName="Leadsheet Type" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_78" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;TaxYear&quot;).ToString]" DisplayName="Tax Year" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_79" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxYear&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;EndTime&quot;).ToString]" DisplayName="End Time" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_80" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[DateTime.Now.ToLocalTime.ToString]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;UserIdentity&quot;).ToString]" DisplayName="User Identity" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_81" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Environment.UserName]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;Machine&quot;).ToString]" DisplayName="Machine" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_82" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Environment.MachineName]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;UserEmail&quot;).ToString]" DisplayName="User Email" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_83" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[JobInfo.UserEmail]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" sap2010:Annotation.AnnotationText="1. Split Mode of exeution from RobotName&#xA;2. convert a string like &quot;attended&quot; to CamelCase &quot;Attended&quot;" Cell="[Config(&quot;ModeOfExecution&quot;).ToString]" DisplayName="Mode of Execution" sap:VirtualizedContainerService.HintSize="433.6,208" sap2010:WorkflowViewState.IdRef="WriteCell_86" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Char.ToUpper(JobInfo.RobotName.Split(&quot;-&quot;c)(1)(0)) + JobInfo.RobotName.Split(&quot;-&quot;c)(1).Substring(1)]" WorkbookPath="[TestReportExcel]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:WriteCell>
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;ExecutionStatus&quot;).ToString]" DisplayName="Execution Status" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_85" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.Status.ToString]" WorkbookPath="[TestReportExcel]" />
+                                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;TotalExecutionTime&quot;).ToString]" DisplayName="Total Execution Time" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_87" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split(&quot;.&quot;c)(0)]" WorkbookPath="[TestReportExcel]" />
                                   </Sequence>
                                 </Sequence>
                               </ui:IfElseIfBlock.Then>
@@ -686,33 +769,55 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:IfElseIfV2.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="483.2,108" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="500.8,108" sap2010:WorkflowViewState.IdRef="Sequence_65">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Get Report Summary Details" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                            <Sequence DisplayName="Get Report Summary Details" sap:VirtualizedContainerService.HintSize="467.2,48" sap2010:WorkflowViewState.IdRef="Sequence_64">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B3" DisplayName="Engagement Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_51" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B4" DisplayName="Service Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_52" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B5" DisplayName="Tax Software" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_53" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B6" DisplayName="Leadsheet Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_54" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B7" DisplayName="Submission Type" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_55" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="Fileroom" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B8" DisplayName="Tax Year" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_56" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxYear&quot;).ToString.Trim]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B10" DisplayName="End Time" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_69" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[DateTime.Now.ToLocalTime.ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B11" DisplayName="User Identity" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_57" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Environment.UserName]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B12" DisplayName="Mode of Execution" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="WriteCell_58" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="Attended" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
-                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="B13" DisplayName="Execution Status" sap:VirtualizedContainerService.HintSize="416,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_70" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.Status.ToString]" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[TestReportExcel]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[Config("SanityReport_ReportPath").ToString.Split(".xlsx")(0)+"_"+TransactionItem.SpecificContent("SPClientID").ToString+".xlsx"]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;EngagementType&quot;).ToString]" DisplayName="Engagement Type" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_51" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;ServiceType&quot;).ToString]" DisplayName="Service Type" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_52" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;TaxSoftware&quot;).ToString]" DisplayName="Tax Software" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_53" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;LeadsheetType&quot;).ToString]" DisplayName="Leadsheet Type" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_54" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;TaxYear&quot;).ToString]" DisplayName="Tax Year" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_56" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.SpecificContent(&quot;TaxYear&quot;).ToString.Trim]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;EndTime&quot;).ToString]" DisplayName="End Time" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_69" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[DateTime.Now.ToLocalTime.ToString]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;UserIdentity&quot;).ToString]" DisplayName="User Identity" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_57" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Environment.UserName]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;Machine&quot;).ToString]" DisplayName="Machine" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_73" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Environment.MachineName]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;UserEmail&quot;).ToString]" DisplayName="User Email" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_74" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[JobInfo.UserEmail]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" sap2010:Annotation.AnnotationText="1. Split Mode of exeution from RobotName&#xA;2. convert a string like &quot;attended&quot; to CamelCase &quot;Attended&quot;" Cell="[Config(&quot;ModeOfExecution&quot;).ToString]" DisplayName="Mode of Execution" sap:VirtualizedContainerService.HintSize="433.6,208" sap2010:WorkflowViewState.IdRef="WriteCell_58" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[Char.ToUpper(JobInfo.RobotName.Split(&quot;-&quot;c)(1)(0)) + JobInfo.RobotName.Split(&quot;-&quot;c)(1).Substring(1)]" WorkbookPath="[TestReportExcel]">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:WriteCell>
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;ExecutionStatus&quot;).ToString]" DisplayName="Execution Status" sap:VirtualizedContainerService.HintSize="433.6,148" sap2010:WorkflowViewState.IdRef="WriteCell_70" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[TransactionItem.Status.ToString]" WorkbookPath="[TestReportExcel]" />
+                              <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;TotalExecutionTime&quot;).ToString]" DisplayName="Total Execution Time" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_88" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split(&quot;.&quot;c)(0)]" WorkbookPath="[TestReportExcel]" />
                             </Sequence>
                           </Sequence>
                         </ui:IfElseIfV2.Then>
                       </ui:IfElseIfV2>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke - TestSummary_DataService_CRUD" sap:VirtualizedContainerService.HintSize="484.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Data Service Report\TestSummary_DataService_CRUD.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_TestReportExcel">[TestReportExcel]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Process finished with Ref ID: &quot; + TransactionItem.Reference]" />
                     </Sequence>
                   </TryCatch.Finally>
@@ -721,7 +826,7 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">540,458</av:Point>
-                  <av:Size x:Key="ShapeSize">240,183</av:Size>
+                  <av:Size x:Key="ShapeSize">240,183.2</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">227.92953933936704</x:Double>
                   <x:Double x:Key="StateContainerHeight">34.79781563235815</x:Double>
@@ -949,7 +1054,7 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">164,98</av:Point>
-                          <av:Size x:Key="ShapeSize">232,117</av:Size>
+                          <av:Size x:Key="ShapeSize">232,116.8</av:Size>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Double x:Key="StateContainerWidth">220</x:Double>
                           <x:Double x:Key="StateContainerHeight">29</x:Double>
@@ -1023,7 +1128,7 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">560,48</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,102</av:Size>
+                                  <av:Size x:Key="ShapeSize">200,102.4</av:Size>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   <x:Double x:Key="StateContainerWidth">188.00041159900604</x:Double>
                                   <x:Double x:Key="StateContainerHeight">29</x:Double>
@@ -1115,7 +1220,7 @@
         <Transition sap2010:Annotation.AnnotationText="This is a simple mecanism to stop the process.&#xA;In reallife scenario you can stop the process when there is no more data to process or on a schedule." DisplayName="No Data" sap:VirtualizedContainerService.HintSize="429.6,969.6" sap2010:WorkflowViewState.IdRef="Transition_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">659.5,215 659.5,185.00000000000003 660,185.00000000000003 660,150</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">659.5,215 659.5,184.99999999999997 660,184.99999999999997 660,150</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">38</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">39</x:Int32>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1149,6 +1254,10 @@
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Used to control the number of consecutive system exceptions." Default="0" Name="ConsecutiveSystemExceptions" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtTestSummaryReport" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtInputData" />
+      <Variable x:TypeArguments="ui:CurrentJobInfo" Name="JobInfo" />
+      <Variable x:TypeArguments="x:String" Name="strBinderID" />
+      <Variable x:TypeArguments="x:String" Name="TestReportExcel" />
+      <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>

@@ -125,7 +125,7 @@
       <AssemblyReference>SanityReport_TCFiltering</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1452.0000000000002,8564.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1452.0000000000002,8639.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="SCD_ReviewerQueue" Name="str_ReviewQueue" />
     </Sequence.Variables>
@@ -134,9 +134,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1188.8,8541.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1188.8,8616" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="1187.2,7448" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="1187.2,7522.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strServiceType" />
             <Variable x:TypeArguments="x:String" Name="strBinderID" />
@@ -321,7 +321,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <uix:NApplicationCard sap2010:Annotation.AnnotationText="This will navigate to Queue. Queue Name is passed as Argument" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1153.6,714.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="8478a3b0-1680-4b51-9d6d-c55a9267f08d" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="This will navigate to Queue. Queue Name is passed as Argument" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1153.6,674.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="8478a3b0-1680-4b51-9d6d-c55a9267f08d" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -376,7 +376,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <Sequence DisplayName="Seq_OpenBinderByPreparer" sap:VirtualizedContainerService.HintSize="1153.6,4368.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Seq_OpenBinderByPreparer" sap:VirtualizedContainerService.HintSize="1153.6,4483.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="StrTitle" />
             </Sequence.Variables>
@@ -406,22 +406,22 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1120,2905.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d9df86d2-f5af-4fb8-a464-f582fbb171c1" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1120,3020" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d9df86d2-f5af-4fb8-a464-f582fbb171c1" Version="V2" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1086.4,2656.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1086.4,2771.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1052.8,1110.4" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
+                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1052.8,1224.8" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="417.6,902.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="417.6,1016.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -429,12 +429,13 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <TryCatch.Try>
-                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,527.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,641.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
+                                <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="382.4,114.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
                                 <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DelayBefore="[CDbl(in_Config(&quot;Timeout_S&quot;))-2]" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d9df86d2-f5af-4fb8-a464-f582fbb171c1" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://stg-scdashboard.sureprep.com/EngagementQueue/Prepration/PreprationQueue" DesignTimeRectangle="1763, 182, 30, 30" DesignTimeScaleFactor="1.25" FriendlyName="'search'" FullSelectorArgument="&lt;webctrl parentid='searchIcon' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='searchIcon' tag='I' type='' class='material-icons theme-color1' aaname='search' check:innerText='search' /&gt;" Guid="ef8e3c14-c139-40d9-872d-d1d0d913340b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIVSURBVFhH7ZUxa8JAFMf7XZy6ufUTdOvmF3Dq4FCXdijoknyCDlLo0JbQgFARRCGTECkWKyVCi5ChDtKCkFJQpKWVwL85+6IxvZhcUHDwB2/w3V3yu3eX5w42hK2In62IH0GRL4yGHxRjyq2GCCI2RuYdZElB8vAaiYVQkDqrw3j/obnxCRGx0Cio2P0n4A8FJ/obrYnHEpExjIIyf1lGxdHNPVpm3zmWPrrte6hnxYUqpbX4MoEillacVSIp1fHySQN+3h+Qy7oyKtSeTQNi8EUmj8iRRCKv45XSgQx0pN350h1GlBaBKzLSb2mHCs6fo+2QVfBvTRGlASUF4IoYF7S7rIYu5ULxVEVuix8PR8RGq0AizrFYlA3nCTKJpDXxkvArsiki3Sv3s63BoFwovToOpmuce2VSTgCuCDq12aeba0Zp5fZcXuReeeCLwMS52xuyFbSGyy/ftyO+T+KpYp+yYgSILD48kS2jZA5pxMsPrGaFjoSkgxpfCIEirNyvnu7KYu+0DPlGR6Op4/KignRmPjaNvIZG24Q1oUcIsESEYcNq15DyvowTu8dlVHtOq3d/S043FpQJESEmAxiahqO8gj1XIKPgQKqh1HnD93TSAFXJIycoE00kKpM+SjFlVivCiCmzehFGDJn1iDB4MjTEY30ijJmMArmzvEOvV4ThyHR74X8T6xeJyFbEz1bEz4aIAL+96xBE5bv09gAAAABJRU5ErkJggg==" InformativeScreenshot="9506367d989ef17340df8758d6216766.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SurePrep – Service Center Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
