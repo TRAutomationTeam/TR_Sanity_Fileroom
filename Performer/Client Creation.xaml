@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Client_Creation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Cloning_MasterTaxClient;assembly=Cloning_MasterTaxClient" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ts="clr-namespace:TaxSoftware_Login.Sanity;assembly=TaxSoftware_Login" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Client_Creation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Cloning_MasterTaxClient;assembly=Cloning_MasterTaxClient" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:t="clr-namespace:TaxSoftware_Login;assembly=TaxSoftware_Login" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
@@ -173,7 +173,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Client Creation" sap:VirtualizedContainerService.HintSize="1452.0000000000002,4043.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
+  <Sequence DisplayName="Client Creation" sap:VirtualizedContainerService.HintSize="1452.0000000000002,4038.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
       <Variable x:TypeArguments="x:String" Name="strClientID" />
@@ -184,7 +184,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="584,113.6" sap2010:WorkflowViewState.IdRef="Assign_17">
+    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="584.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_17">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_strProcessName]</OutArgument>
       </Assign.To>
@@ -192,7 +192,7 @@
         <InArgument x:TypeArguments="x:String">["Client Creation"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:IfElseIfV2 Condition="[(in_drRowToUpdate IsNot Nothing And String.IsNullOrEmpty(in_drRowToUpdate(&quot;ClientID&quot;).ToString))]" DisplayName="Else If - Check Client is present in Inputsheet" sap:VirtualizedContainerService.HintSize="584,3906.4" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+    <ui:IfElseIfV2 Condition="[(in_drRowToUpdate IsNot Nothing And String.IsNullOrEmpty(in_drRowToUpdate(&quot;ClientID&quot;).ToString))]" DisplayName="Else If - Check Client is present in Inputsheet" sap:VirtualizedContainerService.HintSize="584.8,3901.6" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
       <ui:IfElseIfV2.Else>
         <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="582.4,225.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
           <sap:WorkflowViewStateService.ViewState>
@@ -212,13 +212,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:IfElseIfV2.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="582.4,3503.2" sap2010:WorkflowViewState.IdRef="Sequence_43">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="583.2,3498.4" sap2010:WorkflowViewState.IdRef="Sequence_43">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - Check Client Creation is successfully run?" sap:VirtualizedContainerService.HintSize="548.8,3443.2" sap2010:WorkflowViewState.IdRef="If_4">
+          <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - Check Client Creation is successfully run?" sap:VirtualizedContainerService.HintSize="549.6,3438.4" sap2010:WorkflowViewState.IdRef="If_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -226,13 +226,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="547.2,3088" sap2010:WorkflowViewState.IdRef="Sequence_41">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="548,3083.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <TryCatch DisplayName="Try Catch - Client Creation" sap:VirtualizedContainerService.HintSize="513.6,3028" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <TryCatch DisplayName="Try Catch - Client Creation" sap:VirtualizedContainerService.HintSize="514.4,3023.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -240,14 +240,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Try Body - Client Creation" sap:VirtualizedContainerService.HintSize="512,1646.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                    <Sequence DisplayName="Try Body - Client Creation" sap:VirtualizedContainerService.HintSize="512.8,1641.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - Execution Started" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_40" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Started************************************************************************&quot;]" />
-                      <Assign DisplayName="Assign - Application Start Time" sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <ui:LogMessage DisplayName="Log Message - Execution Started" sap:VirtualizedContainerService.HintSize="479.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_40" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Started************************************************************************&quot;]" />
+                      <Assign DisplayName="Assign - Application Start Time" sap:VirtualizedContainerService.HintSize="479.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
                         <Assign.To>
                           <OutArgument x:TypeArguments="s:DateTime">[dtStartTime]</OutArgument>
                         </Assign.To>
@@ -255,16 +255,9 @@
                           <InArgument x:TypeArguments="s:DateTime">[DateTime.Now.ToLocalTime]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ts:GoSystem_Login in_strClientId="{x:Null}" DisplayName="GoSystemLogin" sap:VirtualizedContainerService.HintSize="478.4,278.4" sap2010:WorkflowViewState.IdRef="GoSystem_Login_6" in_Config="[in_Config]" in_RunSearchClientId="No" in_TransactionItem="[in_TransactionItem]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ts:GoSystem_Login>
-                      <c:CloningTaxClient sap:VirtualizedContainerService.HintSize="478.4,382.4" sap2010:WorkflowViewState.IdRef="CloningTaxClient_1" in_Config="[in_Config]" in_IsApiFlow="No" in_TransactionItem="[in_TransactionItem]" in_strTaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" io_strClientId="[strClientID]" />
-                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update client id in Input sheet&#xA;3. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="478.4,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <t:TaxSoftwareLogin sap:VirtualizedContainerService.HintSize="479.2,278.4" sap2010:WorkflowViewState.IdRef="TaxSoftwareLogin_1" in_Config="[in_Config]" in_RunSearchClientId="No" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" />
+                      <c:CloningTaxClient sap:VirtualizedContainerService.HintSize="479.2,382.4" sap2010:WorkflowViewState.IdRef="CloningTaxClient_1" in_Config="[in_Config]" in_IsApiFlow="No" in_TransactionItem="[in_TransactionItem]" in_strTaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" io_strClientId="[strClientID]" />
+                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update client id in Input sheet&#xA;3. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="479,267" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">

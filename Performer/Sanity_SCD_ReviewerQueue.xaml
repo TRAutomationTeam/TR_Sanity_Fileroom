@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_BinderID="37116695" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SanityReport_TCFiltering;assembly=SanityReport_TCFiltering" xmlns:s2="clr-namespace:SanityReport_GenerateOutput;assembly=SanityReport_GenerateOutput" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_BinderID="37116695" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SanityReport_TCFiltering;assembly=SanityReport_TCFiltering" xmlns:s2="clr-namespace:SanityReport_GenerateOutput;assembly=SanityReport_GenerateOutput" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:t="clr-namespace:TakeScreenshot;assembly=TakeScreenshot" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary containing the input settings to be passed to the workflow." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -57,6 +57,8 @@
       <x:String>System.Security</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>SanityReport_TCFiltering</x:String>
+      <x:String>TakeScreenshot</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -123,18 +125,20 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>SanityReport_TCFiltering</AssemblyReference>
+      <AssemblyReference>TakeScreenshot</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1452.0000000000002,8639.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1450.4,8748" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="SCD_ReviewerQueue" Name="str_ReviewQueue" />
+      <Variable x:TypeArguments="x:String" Name="strScreenshotPath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1188.8,8616" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1188.8,8724.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="1187.2,7522.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
@@ -174,7 +178,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <Sequence sap2010:Annotation.AnnotationText="This will click on 'Workspace' menu in SCD" DisplayName="Seq_NavigateToWorkSpace" sap:VirtualizedContainerService.HintSize="1153.6,948" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence sap2010:Annotation.AnnotationText="This will click on 'Workspace' menu in SCD" DisplayName="Seq_NavigateToWorkSpace" sap:VirtualizedContainerService.HintSize="1153.6,988" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -182,7 +186,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1019.2,824.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dc69e995-e530-4399-8aac-f717ef07eb07" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1019.2,864.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dc69e995-e530-4399-8aac-f717ef07eb07" Version="V2" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -376,7 +380,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <Sequence DisplayName="Seq_OpenBinderByPreparer" sap:VirtualizedContainerService.HintSize="1153.6,4483.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Seq_OpenBinderByPreparer" sap:VirtualizedContainerService.HintSize="1153.6,4443.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="StrTitle" />
             </Sequence.Variables>
@@ -406,13 +410,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1120,3020" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d9df86d2-f5af-4fb8-a464-f582fbb171c1" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1120,2980" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="d9df86d2-f5af-4fb8-a464-f582fbb171c1" Version="V2" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1086.4,2771.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1086.4,2731.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -511,7 +515,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:RetryScope>
-                    <uix:NCheckState DisplayName="Check binder state and invoke workflows" sap:VirtualizedContainerService.HintSize="1052.8,1484.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d9df86d2-f5af-4fb8-a464-f582fbb171c1" Version="V3">
+                    <uix:NCheckState DisplayName="Check binder state and invoke workflows" sap:VirtualizedContainerService.HintSize="1052.8,1444.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d9df86d2-f5af-4fb8-a464-f582fbb171c1" Version="V3">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="550.4,1201.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
                           <sap:WorkflowViewStateService.ViewState>
@@ -861,13 +865,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,176.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Error" Message="[&quot;Failed to open binder&quot;]" />
+                  <Throw Exception="[New SystemException(&quot;Failed to open binder&quot;)]" sap:VirtualizedContainerService.HintSize="416,115.2" sap2010:WorkflowViewState.IdRef="Throw_2" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -896,7 +900,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1187.2,839.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1187.2,948" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -910,7 +914,15 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <s1:SanityReport_TCFiltering in_strExceptionScreenshot="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.6,434.4" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_2" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[New List(Of String) From {&quot;TC_01&quot;}]" in_strComments="[New SystemException(&quot;Failed to Open Binder&quot;)]" in_strExceptionMessage="[exception.GetType.ToString]" in_strStatus="[&quot;Pass&quot;]" in_strSubComponent="[str_ReviewQueue]">
+              <t:TakeScreenshot sap:VirtualizedContainerService.HintSize="1153.6,174.4" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" in_Folder="[in_Config(&quot;ExScreenshotsFolderPath&quot;).ToString]" io_FilePath="[strScreenshotPath]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </t:TakeScreenshot>
+              <s1:SanityReport_TCFiltering sap:VirtualizedContainerService.HintSize="1153.6,434.4" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_2" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[New List(Of String) From {&quot;TC_01&quot;}]" in_strComments="[&quot;Failed to Open Binder&quot;]" in_strExceptionMessage="[exception.GetType.ToString]" in_strExceptionScreenshot="[strScreenshotPath]" in_strStatus="[&quot;Fail&quot;]" in_strSubComponent="[str_ReviewQueue]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -926,7 +938,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </s2:SanityReport_GenerateOutput>
-              <Throw Exception="[New SystemException(&quot;Failed to Open Binder&quot;)]" sap:VirtualizedContainerService.HintSize="1153.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="1153.6,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
             </Sequence>
           </ActivityAction>
         </Catch>

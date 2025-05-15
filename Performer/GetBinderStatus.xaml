@@ -7,6 +7,7 @@
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_dtReporter" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_drRowToUpdate" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="out_strBinderStatus" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
@@ -140,41 +141,41 @@
       <AssemblyReference>PresentationCore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get Binder Status" sap:VirtualizedContainerService.HintSize="1450.2,1412" sap2010:WorkflowViewState.IdRef="Sequence_36">
+  <Sequence DisplayName="Get Binder Status" sap:VirtualizedContainerService.HintSize="1452.0000000000002,4454.4" sap2010:WorkflowViewState.IdRef="Sequence_36">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtExtractJobDetails" />
       <Variable x:TypeArguments="x:String" Name="strExceptionScreenshot" />
       <Variable x:TypeArguments="x:Int32" Name="intBinderStatusIteration" />
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="intComponentRowIndex" />
-      <Variable x:TypeArguments="x:String" Name="strBinderStatus" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[New List (Of String) From { &quot;Awaiting Assignment to SP-Verifier&quot;, &quot;Pending Review&quot; }]" Name="listBinderStatus" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(&quot;GetBinderStatus Success&quot;)]" DisplayName="If - GetBinderStatus is successfully run?" sap:VirtualizedContainerService.HintSize="536,1388.8" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(&quot;GetBinderStatus Success&quot;)]" DisplayName="If - GetBinderStatus is successfully run?" sap:VirtualizedContainerService.HintSize="618.4,4431.2" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="534.4,1033.6" sap2010:WorkflowViewState.IdRef="Sequence_39">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="616.8,4077.6" sap2010:WorkflowViewState.IdRef="Sequence_39">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Home Page - Job Details" sap:VirtualizedContainerService.HintSize="500.8,973.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="577afa5e-5510-4b93-9eca-e7d74a1a3536" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Home Page - Job Details" sap:VirtualizedContainerService.HintSize="583.2,4017.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="577afa5e-5510-4b93-9eca-e7d74a1a3536" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do - Home Page - Job Details" sap:VirtualizedContainerService.HintSize="467.2,733.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                <Sequence DisplayName="Do - Home Page - Job Details" sap:VirtualizedContainerService.HintSize="548.8,3777.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign - Application Start Time" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign DisplayName="Assign - Application Start Time" sap:VirtualizedContainerService.HintSize="515.2,114.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="s:DateTime">[dtStartTime]</OutArgument>
                     </Assign.To>
@@ -188,21 +189,21 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <Assign DisplayName="Assign - Binder Status Iteration" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign DisplayName="Assign - Binder Status Iteration" sap:VirtualizedContainerService.HintSize="515.2,114.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[intBinderStatusIteration]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:Int32">60</InArgument>
+                      <InArgument x:TypeArguments="x:Int32">[CInt(in_Config("BinderStatusIteration").ToString)]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="Activate_1">
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="515.2,56.8" sap2010:WorkflowViewState.IdRef="Activate_1">
                     <ui:Activate.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="01596f75-8f23-4221-96e2-41edd4bbaaaa">
                         <ui:Target.TimeoutMS>
@@ -220,7 +221,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:Activate>
-                  <ui:LogMessage DisplayName="Log Message - Binder ID" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_33" Message="[&quot;Checking Import TR agent status for binder: &quot;+in_strBinderID]">
+                  <ui:LogMessage DisplayName="Log Message - Binder ID" sap:VirtualizedContainerService.HintSize="515.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_33" Message="[&quot;Checking Import TR agent status for binder: &quot;+in_strBinderID]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -228,7 +229,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Engagement ID" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="577afa5e-5510-4b93-9eca-e7d74a1a3536" Text="[in_strBinderID + &quot;[k(Enter)]&quot;]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Engagement ID" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="515.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="577afa5e-5510-4b93-9eca-e7d74a1a3536" Text="[in_strBinderID + &quot;[k(Enter)]&quot;]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://prod-monitoring.sureprep.com/JobDetails/" CVScreenId="6a164caa-e7be-4009-9477-92d4514d6b7f" CvElementArea="485, 143, 191, 26" CvType="InputBox" DesignTimeRectangle="486, 144, 188, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'36797110'" FullSelectorArgument="&lt;webctrl id='MainContent_txtEngagementID' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='MainContent_txtEngagementID' tag='INPUT' type='text' class='fntStyle' aaname='' /&gt;" Guid="82afd7dd-77e8-4486-95ec-90b9df27f307" InformativeScreenshot="ff5e531944c8968bd198f693e6146f8d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -245,29 +246,29 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not strBinderStatus=&quot;Awaiting Assignment to SP-Verifier&quot;]" DisplayName="Do While - Check Status" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="[intBinderStatusIteration]">
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not listBinderStatus.Contains(out_strBinderStatus)]" DisplayName="Do While - Check Status" sap:VirtualizedContainerService.HintSize="515.2,832.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="[intBinderStatusIteration]">
                     <ui:InterruptibleDoWhile.Body>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,701" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,702.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtExtractJobDetails]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='Column-1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="577afa5e-5510-4b93-9eca-e7d74a1a3536" Version="V3">
+                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtExtractJobDetails]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='Column-1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="577afa5e-5510-4b93-9eca-e7d74a1a3536" Version="V3">
                           <uix:NExtractData.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="362, 185, 1198, 328" DesignTimeScaleFactor="1" FriendlyName="'Return Details'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;" Guid="025ea733-7a53-4dd2-a9e5-f2952d332826" InformativeScreenshot="2e4034b7e19f44d006f414345f9915cc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
                           </uix:NExtractData.Target>
                         </uix:NExtractData>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[strBinderStatus]</OutArgument>
+                            <OutArgument x:TypeArguments="x:String">[out_strBinderStatus]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
                             <InArgument x:TypeArguments="x:String">[dtExtractJobDetails.Rows(1)(1).ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Show Job" sap:VirtualizedContainerService.HintSize="434,216" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="577afa5e-5510-4b93-9eca-e7d74a1a3536" Version="V3">
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Show Job" sap:VirtualizedContainerService.HintSize="433.6,216.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="577afa5e-5510-4b93-9eca-e7d74a1a3536" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://prod-monitoring.sureprep.com/JobDetails/" CVScreenId="5e004842-7409-4ecd-a24b-26d52d564bde" CvElementArea="775, 143, 78, 28" CvTextArea="783, 150, 60, 12" CvType="Button" DesignTimeRectangle="776, 144, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Show Job'" FullSelectorArgument="&lt;webctrl id='MainContent_btnshowjob' tag='INPUT' aaname='Show Job' /&gt;" Guid="c063e5ef-1394-4a44-8d5f-040a03c9f109" InformativeScreenshot="aea8d56432b0650a2d09d50281684ab1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
                           </uix:NClick.Target>
@@ -286,15 +287,15 @@
                     </ui:InterruptibleDoWhile.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InterruptibleDoWhile>
-                  <If Condition="[strBinderStatus=&quot;Awaiting Assignment to SP-Verifier&quot;]" DisplayName="If Binder Status = Awaiting Assignment to SP-Verifier " sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[listBinderStatus.Contains(out_strBinderStatus)]" DisplayName="If Binder Status = Awaiting Assignment to SP-Verifier " sap:VirtualizedContainerService.HintSize="515,2271" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -305,7 +306,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message - Binder Status" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_34" Message="[&quot;Binder Status: &quot;+strBinderStatus]">
+                        <ui:LogMessage DisplayName="Log Message - Binder Status" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_34" Message="[&quot;Binder Status: &quot;+out_strBinderStatus]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -313,7 +314,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <s1:SanityReport_TCFiltering in_strExceptionMessage="{x:Null}" in_strExceptionScreenshot="{x:Null}" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_2" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[New List(Of String) From {&quot;TC_04&quot;}]" in_strComments="[&quot;Binder Status: &quot;+strBinderStatus]" in_strStatus="[&quot;Pass&quot;]" in_strSubComponent="Submission wizard">
+                        <s1:SanityReport_TCFiltering in_strExceptionMessage="{x:Null}" in_strExceptionScreenshot="{x:Null}" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_2" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[New List(Of String) From {&quot;TC_04&quot;}]" in_strComments="[&quot;Binder Status: &quot;+out_strBinderStatus]" in_strStatus="[&quot;Pass&quot;]" in_strSubComponent="Submission wizard">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -409,7 +410,7 @@
                                   <OutArgument x:TypeArguments="x:Object">[in_dtReporter(intComponentRowIndex)("Exception")]</OutArgument>
                                 </ui:AssignOperation.To>
                                 <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:Object">["Invalid binder status: "+strBinderStatus]</InArgument>
+                                  <InArgument x:TypeArguments="x:Object">["Invalid binder status: "+out_strBinderStatus]</InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
                             </scg:List>
@@ -420,7 +421,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:WriteCell WorkbookPathResource="{x:Null}" sap2010:Annotation.AnnotationText="query processes the &quot;Application Wait Time&quot; column from each row in the in_dtReporter DataTable, sums up all the valid time intervals, and returns the total duration as a string." Cell="[in_Config(&quot;TotalApplicationWaitTime&quot;).ToString]" DisplayName="Application Wait Time" sap:VirtualizedContainerService.HintSize="433.6,216.8" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[((From row In in_dtReporter.AsEnumerable()Let intervalString = row.Field(Of String)(&quot;Application Wait Time&quot;)Where Not String.IsNullOrEmpty(intervalString)Let interval = TimeSpan.Parse(intervalString)Select interval).Aggregate(Function(ts1, ts2) ts1.Add(ts2))).ToString]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]">
+                  <ui:WriteCell WorkbookPathResource="{x:Null}" sap2010:Annotation.AnnotationText="query processes the &quot;Application Wait Time&quot; column from each row in the in_dtReporter DataTable, sums up all the valid time intervals, and returns the total duration as a string." Cell="[in_Config(&quot;TotalApplicationWaitTime&quot;).ToString]" DisplayName="Application Wait Time" sap:VirtualizedContainerService.HintSize="515,213" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[((From row In in_dtReporter.AsEnumerable()Let intervalString = row.Field(Of String)(&quot;Application Wait Time&quot;)Where Not String.IsNullOrEmpty(intervalString)Let interval = TimeSpan.Parse(intervalString)Select interval).Aggregate(Function(ts1, ts2) ts1.Add(ts2))).ToString]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -443,13 +444,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="534.4,225.6" sap2010:WorkflowViewState.IdRef="Sequence_40">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="617,224" sap2010:WorkflowViewState.IdRef="Sequence_40">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - Already executed" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_36" Message="[&quot;GetBinderStatus is already executed.&quot;]" />
+          <ui:LogMessage DisplayName="Log Message - Already executed" sap:VirtualizedContainerService.HintSize="583,164" sap2010:WorkflowViewState.IdRef="LogMessage_36" Message="[&quot;GetBinderStatus is already executed.&quot;]" />
         </Sequence>
       </If.Else>
     </If>

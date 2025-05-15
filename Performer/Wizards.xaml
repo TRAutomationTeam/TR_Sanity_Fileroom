@@ -147,7 +147,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Wizards" sap:VirtualizedContainerService.HintSize="1452.0000000000002,3584" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence DisplayName="Wizards" sap:VirtualizedContainerService.HintSize="1452.0000000000002,3720.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
       <Variable x:TypeArguments="x:Int32" Default="3" Name="intComponentRowIndex" />
@@ -166,7 +166,7 @@
         <InArgument x:TypeArguments="x:String">Wizards</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - Wizard is successfully run?" sap:VirtualizedContainerService.HintSize="549.6,3447.2" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - Wizard is successfully run?" sap:VirtualizedContainerService.HintSize="549.6,3584" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,13 +174,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="548,3092" sap2010:WorkflowViewState.IdRef="Sequence_22">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="548,3228.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch - Wizards" sap:VirtualizedContainerService.HintSize="514.4,3032" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch DisplayName="Try Catch - Wizards" sap:VirtualizedContainerService.HintSize="514.4,3168.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -188,7 +188,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Try Body - Wizards" sap:VirtualizedContainerService.HintSize="512.8,1650.4" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence DisplayName="Try Body - Wizards" sap:VirtualizedContainerService.HintSize="512.8,1787.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -218,8 +218,9 @@
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <r:ReviewWizards sap:VirtualizedContainerService.HintSize="479,428" sap2010:WorkflowViewState.IdRef="ReviewWizards_2" in_Config="[in_Config]" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_isAPI="NO" in_strBinderID="[strBinderID]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" out_Wages_ListData="[out_ListWagesData]" />
-                <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="479,221" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                <r:ReviewWizards sap:VirtualizedContainerService.HintSize="479.2,434.4" sap2010:WorkflowViewState.IdRef="ReviewWizards_2" in_Config="[in_Config]" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_isAPI="Yes" in_strBinderID="[strBinderID]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" out_Wages_ListData="[out_ListWagesData]" />
+                <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="479.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="479.2,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -246,9 +247,9 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,148" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
-                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - SCD_VerificationQueue" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="479,224" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_2" Progress="SCD_VerificationQueue Success" TransactionItem="[in_TransactionItem]" />
-                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - Wizards" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="479,215" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="[out_strProcessName+&quot; Success&quot;]" TransactionItem="[in_TransactionItem]" />
+                <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
+                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - SCD_VerificationQueue" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="479.2,226.4" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_2" Progress="SCD_VerificationQueue Success" TransactionItem="[in_TransactionItem]" />
+                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - Wizards" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="479.2,217.6" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="[out_strProcessName+&quot; Success&quot;]" TransactionItem="[in_TransactionItem]" />
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
@@ -272,7 +273,7 @@
                       </Assign.Value>
                     </Assign>
                     <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
-                    <ui:MultipleAssign DisplayName="Multiple Assign - Exception Details" sap:VirtualizedContainerService.HintSize="478.4,210.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                    <ui:MultipleAssign DisplayName="Multiple Assign - Exception Details" sap:VirtualizedContainerService.HintSize="479.2,233.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
