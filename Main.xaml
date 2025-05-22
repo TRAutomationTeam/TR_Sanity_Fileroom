@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ConfigFilePath="C:\Automation Team\Sanity Testing\Fileroom_Config - QAT.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SanityReport_ReadTemplate;assembly=SanityReport_ReadTemplate" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ConfigFilePath="C:\Automation Team\Sanity Testing\Fileroom_Config.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SanityReport_ReadTemplate;assembly=SanityReport_ReadTemplate" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file." Name="in_OrchestratorQueueName" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file." Name="in_OrchestratorQueueFolder" Type="InArgument(x:String)" />
@@ -133,7 +133,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Project Name: Fileroom_SanityTest]&#xA;[Objective: The aim of this project is to automate the sanity testing process for the FileRoom system, ensuring that all critical functionalities are working correctly. This will enhance efficiency, reduce manual effort, and ensure consistent validation of the system's performance.]&#xA;[Scope:&#xA;1.Base Document Preparation: Use a demo tax file as the base document for testing. This will serve as the standard input for all subsequent test cases.&#xA;2.Organizer Page Validation: Ensure that the Organizer page is correctly set up so that all wizards can be accessed and executed without issues. This involves checking navigation paths and functionality triggers for all necessary components.&#xA;3.Preparer Dashboard Testing: Validate the Input Form functionality using the 'Unassociated Form' and 'Move to' features. This includes ensuring that forms can be correctly filled, submitted, and associated with the appropriate records.&#xA;4.Export Functionality Testing: Test the 'Export to Tax' functionality to confirm that data is accurately exported into the specified tax software. This involves verifying data integrity and format compatibility.&#xA;5.Import and Validation: Import transaction records (Tr) and validate that the Leadsheet is correctly populated. This ensures that imported data is accurately reflected in the system, maintaining data consistency.&#xA;6.Binder Submission: Automate the process of submitting a binder from the SCD (Source Control Document). This involves verifying that all related documents are correctly compiled and submitted without errors.]&#xA;[Author:   ]&#xA;[Applications involved: GoSystem, SPbinder]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1468.8000000000002,20" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Project Name: Fileroom_SanityTest]&#xA;[Objective: The aim of this project is to automate the sanity testing process for the FileRoom system, ensuring that all critical functionalities are working correctly. This will enhance efficiency, reduce manual effort, and ensure consistent validation of the system's performance.]&#xA;[Scope:&#xA;1.Base Document Preparation: Use a demo tax file as the base document for testing. This will serve as the standard input for all subsequent test cases.&#xA;2.Organizer Page Validation: Ensure that the Organizer page is correctly set up so that all wizards can be accessed and executed without issues. This involves checking navigation paths and functionality triggers for all necessary components.&#xA;3.Preparer Dashboard Testing: Validate the Input Form functionality using the 'Unassociated Form' and 'Move to' features. This includes ensuring that forms can be correctly filled, submitted, and associated with the appropriate records.&#xA;4.Export Functionality Testing: Test the 'Export to Tax' functionality to confirm that data is accurately exported into the specified tax software. This involves verifying data integrity and format compatibility.&#xA;5.Import and Validation: Import transaction records (Tr) and validate that the Leadsheet is correctly populated. This ensures that imported data is accurately reflected in the system, maintaining data consistency.&#xA;6.Binder Submission: Automate the process of submitting a binder from the SCD (Source Control Document). This involves verifying that all related documents are correctly compiled and submitted without errors.]&#xA;[Author:   ]&#xA;[Applications involved: GoSystem, SPbinder]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="926.4000000000001,353.6" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -266,9 +266,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="240,189.6" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="582.4,8972.8" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="537.6,8326.4" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="537.6,8496.8" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -276,7 +276,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="536,2848" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="536,3018.4" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -291,14 +291,17 @@
                           <InArgument x:TypeArguments="ui:BusinessRuleException">[Nothing]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If sap2010:Annotation.AnnotationText="The SanityReport_ReadTemplate is called only if is_first_run is True" Condition="[Not TransactionItem.Progress.Contains(&quot;First_ReadTemplate&quot;)]" DisplayName="If SanityReport_ReadTemplate First Run" sap:VirtualizedContainerService.HintSize="502.4,2336.8" sap2010:WorkflowViewState.IdRef="If_20">
+                      <If sap2010:Annotation.AnnotationText="The SanityReport_ReadTemplate is called only if is_first_run is True" Condition="[Not TransactionItem.Progress.Contains(&quot;First_ReadTemplate&quot;)]" DisplayName="If SanityReport_ReadTemplate First Run" sap:VirtualizedContainerService.HintSize="502.4,2507.2" sap2010:WorkflowViewState.IdRef="If_20">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,2077.6" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,2248" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strFileroomURL" />
+                            </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -325,6 +328,14 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
+                            <Assign DisplayName="Assign - Fileroom URL" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_42">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[strFileroomURL]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[Config("Fileroom_URL").ToString]</InArgument>
+                              </Assign.Value>
+                            </Assign>
                             <s1:SanityReport_ReadTemplate sap:VirtualizedContainerService.HintSize="433.6,382.4" sap2010:WorkflowViewState.IdRef="SanityReport_ReadTemplate_1" in_SanityTestFilesheetName="[Config(&quot;SanityReport_FilesheetName&quot;).ToString]" in_strBinderID="[drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim]" in_strSPClientID="[TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString]" in_strSanityTestOutputPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString]" in_strSanityTestTemplatePath="[Config(&quot;SanityReport_TemplatePath&quot;).ToString]" out_dtTestSummaryReport="[dtTestSummaryReport]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -333,6 +344,61 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </s1:SanityReport_ReadTemplate>
+                            <ui:IfElseIfV2 Condition="[strFileroomURL.ToLower.Contains(&quot;production&quot;)]" DisplayName="Else If -  Get Environment" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="IfElseIfV2_8">
+                              <ui:IfElseIfV2.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </ui:IfElseIfV2.Else>
+                              <ui:IfElseIfV2.ElseIfs>
+                                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strFileroomURL.ToLower.Contains(&quot;qa&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_8">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;Environment&quot;).ToString]" DisplayName="Environment" sap:VirtualizedContainerService.HintSize="382.4,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_94" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="QAT" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strFileroomURL.ToLower.Contains(&quot;stage&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_9">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;Environment&quot;).ToString]" DisplayName="Environment" sap:VirtualizedContainerService.HintSize="382.4,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_95" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="STAGE" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                </sc:BindingList>
+                              </ui:IfElseIfV2.ElseIfs>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:IfElseIfV2.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[Config(&quot;Environment&quot;).ToString]" DisplayName="Environment" sap:VirtualizedContainerService.HintSize="382.4,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_93" SheetName="[Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="LIVE" WorkbookPath="[Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;]" />
+                                </Sequence>
+                              </ui:IfElseIfV2.Then>
+                            </ui:IfElseIfV2>
                             <ui:IfElseIfV2 Condition="[System.IO.File.Exists(Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+TransactionItem.SpecificContent(&quot;SPClientID&quot;).ToString+&quot;.xlsx&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="433.6,1016" sap2010:WorkflowViewState.IdRef="IfElseIfV2_6">
                               <ui:IfElseIfV2.Else>
                                 <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_74">
@@ -1073,7 +1139,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="530.4,1113.6" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="200,104" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
                                 <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="485.6,968.8" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                   <sap:WorkflowViewStateService.ViewState>

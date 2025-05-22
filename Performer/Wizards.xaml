@@ -218,7 +218,7 @@
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <r:ReviewWizards sap:VirtualizedContainerService.HintSize="479.2,434.4" sap2010:WorkflowViewState.IdRef="ReviewWizards_2" in_Config="[in_Config]" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_isAPI="Yes" in_strBinderID="[strBinderID]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" out_Wages_ListData="[out_ListWagesData]" />
+                <r:ReviewWizards sap:VirtualizedContainerService.HintSize="479.2,434.4" sap2010:WorkflowViewState.IdRef="ReviewWizards_2" in_Config="[in_Config]" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_isAPI="No" in_strBinderID="[strBinderID]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" out_Wages_ListData="[out_ListWagesData]" />
                 <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="479.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
                 <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="479.2,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                   <ui:MultipleAssign.AssignOperations>
