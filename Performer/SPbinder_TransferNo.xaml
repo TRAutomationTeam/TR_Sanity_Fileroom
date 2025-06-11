@@ -136,16 +136,12 @@
       <AssemblyReference>TakeScreenshot</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1452.0000000000002,7929.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1068,1397.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="counter" />
       <Variable x:TypeArguments="x:String" Name="strCounter" />
       <Variable x:TypeArguments="x:String" Default="SPBinder_TransferNo" Name="strSubComponent" />
-      <Variable x:TypeArguments="x:Int32" Name="intComponentRowIndex">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="9" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="9" Name="intComponentRowIndex" />
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
       <Variable x:TypeArguments="x:String" Name="strBinderID" />
       <Variable x:TypeArguments="x:String" Name="strExceptionScreenshot" />
@@ -155,7 +151,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="1179.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="649.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_strProcessName]</OutArgument>
       </Assign.To>
@@ -163,7 +159,7 @@
         <InArgument x:TypeArguments="x:String">SPBinder_TransferNo</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - SPBinder_TransferNo is successfully run?" sap:VirtualizedContainerService.HintSize="1179.2,7792.8" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - SPBinder_TransferNo is successfully run?" sap:VirtualizedContainerService.HintSize="649.6,1260.8" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -171,13 +167,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1177.6,7437.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="585.6,873.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch - SPBinder_TransferNo" sap:VirtualizedContainerService.HintSize="1144,7377.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch - SPBinder_TransferNo" sap:VirtualizedContainerService.HintSize="552,813.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -192,8 +188,8 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - Execution Started" sap:VirtualizedContainerService.HintSize="1108.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Started************************************************************************&quot;]" />
-                <ui:MultipleAssign DisplayName="Multiple Assign - BinderID &amp; Application Start Time" sap:VirtualizedContainerService.HintSize="1108.8,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                <ui:LogMessage DisplayName="Log Message - Execution Started" sap:VirtualizedContainerService.HintSize="1144,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Started************************************************************************&quot;]" />
+                <ui:MultipleAssign DisplayName="Multiple Assign - BinderID &amp; Application Start Time" sap:VirtualizedContainerService.HintSize="1144,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -215,7 +211,7 @@
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1108.8,5083.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1144,4553.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -405,7 +401,7 @@
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable DesignTimeRectangle="794, 131, 125, 44" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="[string.Format(&quot;&lt;ctrl role='radio button' idx='{0}' /&gt;&quot;, strCounter)]" Guid="ee51eccc-27c5-4e85-b59f-70c88045bde8" InformativeScreenshot="bac4b79295f1b4579e90c190bf27cec5.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SurePrep Preparer/Reviewer Checklist' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive">
                                               <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                   <uix:Target DesignTimeRectangle="794, 100, 124, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl name=' Preparer' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name=' Preparer' role='text' automationid='' check:text='Preparer' /&gt;" Guid="3e2aab33-c04d-45d2-8607-14ac024ad465" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAAAXCAYAAADDXUcwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOVSURBVGhD7VgJTxNhEOXnqVEQC4Vyi0CwEgigIoICcogFBAUhEIkHcsgtIiKHhBhQ4xFAUTwxikENSEmgSS1k7Jv0W7Z0CTEIbt19yWfyve/YrfNm5i0+i98n6Mf0AOnQDuQx97Hb5si2+JknOrQBecx1AWgQbgLQW4D24NYC+F8dmoVeATQI3QRqHKo1gWPjE7Rr3wGPYQqPpubWdlpdXXXt1LEVqNYEygWQd9ZClpIyCo2Kkbjmtg7XTh1bgWpNoFwAU2/eMudYWSFzYgpziSnHyeFwMK/j70C1FUAIAKipvcKcMTSK5ubmqbunl+dx5kTKzM4jf2Mo5RcW09z8PFcNzLG+199IOfmFtGC18j0zM1/JEBxOvoYgPmcMieR9/oEhbi2mrqFJugMjwBThdg8QFXuY184Vl1J0nJl2+xr4nYcfjEhzrEdEx9HA4JDr1NpvOXoig1LTMpzvEkzXbjS4VncGqjWBfyoADAQnLSOLmlra6HROPnMnT+XQk6fPKD0zm+f4z0ZwhQDAwVdg/6H4BOmu+0PD/LzevgG6Xt9IPb19VF5ZzYLBOkQmIASwxy+AA15YdJ7fC6LbH2iizq5unouzI6OP+Jz4LRjiHe71D/LaTsErTKAQgN1up/iEZOaSUtOc81+SAIQggI/TnziTwb+cfMXc87FxKRPfvf/gJoB+V1bKW4w8wHJcravn9RinWJaWlpgTApBnL8QCLrfAIlUTIUpUCkAI4EhSKv+WfwGvMIHI3o1MoJIAkL3gEODJ11P0xRls3GcICmMeGagkAKCqppY5eVB+LizwHRg3W9o9nqckAJwHV1l9WTp7oaKKOZR7QA0C8AoTKB/o9bfv3OVsBZQEILiNBgK+kQBEUFBhbDYbZ7D8rBibCUBwSkMEXA0CkMMrTOB6KAlg9OFj5tBzkXlK2KwFlJVXSpUE5X529hvvUXqekgDgNcBVVNW4GE+orgJ4gwlcD6WALC0vk9lVgkMjY9jVt3bc4jaSdaaAS7pcAKgqre2dlHwsnedoFWMTLyQBwNzVNzazEYQw1j9PSQDYKzxHgaWE52gv8BZtHV28R3Ue4H8RAICMzcotkD7h8IUAA1l68RJZrYtuAoADR5Dh2lH6hUuHkPIKi/jzTNyBP0r5BZg2FQCAViU+A3F/2MFYN6evOgGoqQVsNzbyAFqDak3gdkMXgCf0CqBBqNYE6tgZqNYE6tgZrMWc6DfrqlTp15NGXAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                                                 </scg:List>
                                               </uix:TargetAnchorable.Anchors>
@@ -641,18 +637,24 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="518.4,626.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <ActivityAction x:TypeArguments="s:Exception">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="583.2,555.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,555.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign - SPBinder_TransferNo - Failed" sap:VirtualizedContainerService.HintSize="549.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign DisplayName="Assign - SPBinder_TransferNo - Failed" sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[in_drRowToUpdate("Status")]</OutArgument>
                       </Assign.To>
@@ -660,8 +662,8 @@
                         <InArgument x:TypeArguments="x:Object">[out_strProcessName+" - Failed"]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="549.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
-                    <ui:MultipleAssign DisplayName="Multiple Assign - Exception Details" sap:VirtualizedContainerService.HintSize="478.4,210.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
+                    <ui:MultipleAssign DisplayName="Multiple Assign - Exception Details" sap:VirtualizedContainerService.HintSize="478.4,233.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -685,7 +687,7 @@
                               <OutArgument x:TypeArguments="x:Object">[in_dtReporter(intComponentRowIndex)("Exception")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="x:Object">[exception.GetType.ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:Object">[exception.Message]</InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">

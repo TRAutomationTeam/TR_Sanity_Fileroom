@@ -5,6 +5,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "Cloning_MasterTaxClient": "[1.0.24]",
+    "ExceptionClassifier": "[1.0.8]",
     "PingID": "[1.0.12]",
     "Review_Wizards": "[1.1.0]",
     "Sanity_ExportValidation": "[1.0.19]",
@@ -30,7 +31,9 @@
   "entitiesStores": [
     {
       "serviceDocument": ".entities/EntitiesStore.json",
-      "namespace": "Fileroom_SanityTest"
+      "tenantName": "DefaultTenant",
+      "namespace": "Fileroom_SanityTest",
+      "uniqueReference": "2pp9Jop87W7GWWOK+MjN/l/ZBYewoLmaZmZgkW2R470="
     }
   ],
   "schemaVersion": "4.0",

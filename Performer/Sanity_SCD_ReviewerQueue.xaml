@@ -130,7 +130,7 @@
       <AssemblyReference>TakeScreenshot</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1452.0000000000002,4456" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1068,1229.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="SCD_ReviewerQueue" Name="str_ReviewQueue" />
       <Variable x:TypeArguments="x:String" Name="strScreenshotPath" />
@@ -140,7 +140,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1020.8,4432.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,1206.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="1019.2,4153.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
@@ -904,19 +904,25 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422.4,1019.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
           <ActivityAction x:TypeArguments="s:Exception">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1019.2,24.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,948" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1153.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Error" Message="[&quot;TC_01 Open the transferred binder from the Reviewer Queue and verify access:Fail&quot;]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Error" Message="[&quot;TC_01 Open the transferred binder from the Reviewer Queue and verify access:Fail&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -924,7 +930,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <t:TakeScreenshot sap:VirtualizedContainerService.HintSize="1153.6,174.4" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" in_Folder="[in_Config(&quot;ExScreenshotsFolderPath&quot;).ToString]" io_FilePath="[strScreenshotPath]">
+              <t:TakeScreenshot sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" in_Folder="[in_Config(&quot;ExScreenshotsFolderPath&quot;).ToString]" io_FilePath="[strScreenshotPath]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -932,7 +938,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </t:TakeScreenshot>
-              <s1:SanityReport_TCFiltering sap:VirtualizedContainerService.HintSize="1153.6,434.4" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_2" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[New List(Of String) From {&quot;TC_01&quot;}]" in_strComments="[&quot;Failed to Open Binder&quot;]" in_strExceptionMessage="[exception.GetType.ToString]" in_strExceptionScreenshot="[strScreenshotPath]" in_strStatus="[&quot;Fail&quot;]" in_strSubComponent="[str_ReviewQueue]">
+              <s1:SanityReport_TCFiltering sap:VirtualizedContainerService.HintSize="382.4,434.4" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_2" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[New List(Of String) From {&quot;TC_01&quot;}]" in_strComments="[&quot;Failed to Open Binder&quot;]" in_strExceptionMessage="[exception.Message]" in_strExceptionScreenshot="[strScreenshotPath]" in_strStatus="[&quot;Fail&quot;]" in_strSubComponent="[str_ReviewQueue]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -940,7 +946,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </s1:SanityReport_TCFiltering>
-              <s2:SanityReport_GenerateOutput sap:VirtualizedContainerService.HintSize="1153.6,56.8" sap2010:WorkflowViewState.IdRef="SanityReport_GenerateOutput_2" in_Config="[in_Config]" in_SanityTestFilesheetName="[in_Config(&quot;SanityReport_FilesheetName&quot;).ToString()]" in_TransactionItem="[in_TransactionItem]" in_dtTestSummaryReport="[in_dtTestSummaryReport]" in_strBinderID="[in_strBinderID]">
+              <s2:SanityReport_GenerateOutput sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="SanityReport_GenerateOutput_2" in_Config="[in_Config]" in_SanityTestFilesheetName="[in_Config(&quot;SanityReport_FilesheetName&quot;).ToString()]" in_TransactionItem="[in_TransactionItem]" in_dtTestSummaryReport="[in_dtTestSummaryReport]" in_strBinderID="[in_strBinderID]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -948,7 +954,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </s2:SanityReport_GenerateOutput>
-              <Rethrow sap:VirtualizedContainerService.HintSize="1153.6,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
             </Sequence>
           </ActivityAction>
         </Catch>

@@ -127,7 +127,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SPbinder_TransferYes" sap:VirtualizedContainerService.HintSize="1452.0000000000002,5604" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SPbinder_TransferYes" sap:VirtualizedContainerService.HintSize="1123.2,1397.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="SPBinder_TransferYes" Name="strSubComponent" />
       <Variable x:TypeArguments="x:Int32" Name="counter" />
@@ -141,7 +141,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="1094.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="1123.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_strProcessName]</OutArgument>
       </Assign.To>
@@ -149,7 +149,7 @@
         <InArgument x:TypeArguments="x:String">SPBinder_TransferYes</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - SPBinder_TransferYes is successfully run?" sap:VirtualizedContainerService.HintSize="1094.4,5467.2" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - SPBinder_TransferYes is successfully run?" sap:VirtualizedContainerService.HintSize="1123.2,1260.8" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -157,13 +157,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1092.8,5112" sap2010:WorkflowViewState.IdRef="Sequence_13">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="585.6,873.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch - SPBinder_TransferYes" sap:VirtualizedContainerService.HintSize="1059.2,5052" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch - SPBinder_TransferYes" sap:VirtualizedContainerService.HintSize="552,813.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -178,8 +178,8 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - Execution Started" sap:VirtualizedContainerService.HintSize="1024,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Started************************************************************************&quot;]" />
-                <ui:MultipleAssign DisplayName="Multiple Assign - BinderID &amp; Application Start Time" sap:VirtualizedContainerService.HintSize="1024,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                <ui:LogMessage DisplayName="Log Message - Execution Started" sap:VirtualizedContainerService.HintSize="1059.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Started************************************************************************&quot;]" />
+                <ui:MultipleAssign DisplayName="Multiple Assign - BinderID &amp; Application Start Time" sap:VirtualizedContainerService.HintSize="1059.2,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -201,7 +201,7 @@
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <TryCatch DisplayName="Try Catch - Transfer Binder Yes" sap:VirtualizedContainerService.HintSize="1024,2757.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <TryCatch DisplayName="Try Catch - Transfer Binder Yes" sap:VirtualizedContainerService.HintSize="1059.2,2228" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,7 +209,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: SurePrep Preparer/Reviewer Checklist" sap:VirtualizedContainerService.HintSize="1022,1968" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="cac039cc-b112-4a43-a41a-0b7e46990678" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: SurePrep Preparer/Reviewer Checklist" sap:VirtualizedContainerService.HintSize="1021.6,1968" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="cac039cc-b112-4a43-a41a-0b7e46990678" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -224,7 +224,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TransferBinder'" sap:VirtualizedContainerService.HintSize="954,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cac039cc-b112-4a43-a41a-0b7e46990678" Version="V3">
                               <uix:NClick.Target>
-                                <uix:TargetAnchorable CVScreenId="ba28681e-81bb-4d11-9bda-01192b28ca6d" CvElementArea="336, 64, 28, 23" CvType="Icon" DesignTimeRectangle="332, 62, 38, 30" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'push button'" FullSelectorArgument="&lt;ctrl role='push button' helpText='Transfer Ownership / Update Status' /&gt;" FuzzySelectorArgument="&lt;ctrl role='push button' helpText='Transfer Ownership / Update Status' automationid='' /&gt;" Guid="51b688d8-5760-4165-ab73-56e867357893" InformativeScreenshot="4dd241a8f3b0a6ade63e446873b63227.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                                <uix:TargetAnchorable CVScreenId="ba28681e-81bb-4d11-9bda-01192b28ca6d" CvElementArea="336, 64, 28, 23" CvType="Icon" DesignTimeRectangle="332, 62, 38, 30" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl role='push button' helpText='Transfer Ownership / Update Status' /&gt;" FuzzySelectorArgument="&lt;ctrl role='push button' helpText='Transfer Ownership / Update Status' automationid='' /&gt;" Guid="51b688d8-5760-4165-ab73-56e867357893" InformativeScreenshot="4dd241a8f3b0a6ade63e446873b63227.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -244,10 +244,10 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cac039cc-b112-4a43-a41a-0b7e46990678" Timeout="60" Version="V3">
                                     <uix:NClick.Target>
-                                      <uix:TargetAnchorable CVScreenId="046a4654-9a55-4742-b6b1-1c9040b8599f" CvElementArea="331, 116, 103, 35" CvTextArea="371, 128, 22, 13" CvTextArgument="No" CvType="Button" DesignTimeRectangle="177, 95, 80, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'No'" FullSelectorArgument="&lt;ctrl name='Yes' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Yes' role='push button' automationid='' check:text='No' /&gt;" Guid="fc83857e-ba5c-4aa9-85da-bb994d4c236b" ImageBase64="" InformativeScreenshot="78726c48a229d0701293f296a141f5db.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable CVScreenId="046a4654-9a55-4742-b6b1-1c9040b8599f" CvElementArea="331, 116, 103, 35" CvTextArea="371, 128, 22, 13" CvTextArgument="No" CvType="Button" DesignTimeRectangle="177, 95, 80, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Yes' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Yes' role='push button' automationid='' check:text='No' /&gt;" Guid="fc83857e-ba5c-4aa9-85da-bb994d4c236b" ImageBase64="" InformativeScreenshot="78726c48a229d0701293f296a141f5db.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                         <uix:TargetAnchorable.Anchors>
                                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="046a4654-9a55-4742-b6b1-1c9040b8599f" CvTextArea="91, 65, 311, 15" CvTextArgument="Are you sure you want to Transfer the binder?" CvType="Text" DesignTimeRectangle="74, 50, 248, 16" ElementType="Text" FriendlyName="'Question graphic'" FullSelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' automationid='' check:text='Question graphic Are you sure you want to Transfer the binder?' /&gt;" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+                                            <uix:Target CVScreenId="046a4654-9a55-4742-b6b1-1c9040b8599f" CvTextArea="91, 65, 311, 15" CvTextArgument="Are you sure you want to Transfer the binder?" CvType="Text" DesignTimeRectangle="74, 50, 248, 16" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' automationid='' check:text='Question graphic Are you sure you want to Transfer the binder?' /&gt;" Guid="d07ff039-0759-411f-a0e8-8c5c8f96be40" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
                                           </scg:List>
                                         </uix:TargetAnchorable.Anchors>
                                       </uix:TargetAnchorable>
@@ -276,7 +276,7 @@
                                 </Sequence>
                               </uix:NCheckState.IfNotExists>
                               <uix:NCheckState.Target>
-                                <uix:TargetAnchorable CVScreenId="a65b4e67-8390-4a2e-ad84-794814a768e0" CvTextArea="91, 65, 311, 15" CvTextArgument="Are you sure you want to Transfer the binder?" CvType="Text" DesignTimeRectangle="93, 63, 309, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Question graphic'" FullSelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' automationid='' check:text='Question graphic Are you sure you want to Transfer the binder?' /&gt;" Guid="7e6b5ea5-2ae0-4884-8993-657532185461" InformativeScreenshot="8d6232e0a5df1ed40abfb1beb0b76a1f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                <uix:TargetAnchorable CVScreenId="a65b4e67-8390-4a2e-ad84-794814a768e0" CvTextArea="91, 65, 311, 15" CvTextArgument="Are you sure you want to Transfer the binder?" CvType="Text" DesignTimeRectangle="93, 63, 309, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Question graphic Are you sure you want to Transfer the binder?' role='text' automationid='' check:text='Question graphic Are you sure you want to Transfer the binder?' /&gt;" Guid="7e6b5ea5-2ae0-4884-8993-657532185461" InformativeScreenshot="8d6232e0a5df1ed40abfb1beb0b76a1f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                               </uix:NCheckState.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -369,18 +369,24 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="518.4,626.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <ActivityAction x:TypeArguments="s:Exception">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1057.6,555.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,555.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign - SPBinder_TransferYes - Failed" sap:VirtualizedContainerService.HintSize="1024,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign DisplayName="Assign - SPBinder_TransferYes - Failed" sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[in_drRowToUpdate("Status")]</OutArgument>
                       </Assign.To>
@@ -388,8 +394,8 @@
                         <InArgument x:TypeArguments="x:Object">[out_strProcessName+" - Failed"]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="1024,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
-                    <ui:MultipleAssign DisplayName="Multiple Assign - Exception Details" sap:VirtualizedContainerService.HintSize="478.4,210.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
+                    <ui:MultipleAssign DisplayName="Multiple Assign - Exception Details" sap:VirtualizedContainerService.HintSize="478.4,233.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -413,7 +419,7 @@
                               <OutArgument x:TypeArguments="x:Object">[in_dtReporter(intComponentRowIndex)("Exception")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="x:Object">[exception.GetType.ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:Object">[exception.Message]</InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
